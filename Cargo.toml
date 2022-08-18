@@ -1,0 +1,24 @@
+[package]
+name = "gba-minrt"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2.0"
+readme = "README.md"
+description = "minimal Game Boy Advance runtime"
+links = "gba-minrt"
+
+[features]
+panic = []
+
+[build-dependencies]
+cc = "1.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[package.metadata.docs.rs]
+default-target = "thumbv4t-none-eabi"
+cargo-args = ["-Z", "build-std=core"]
