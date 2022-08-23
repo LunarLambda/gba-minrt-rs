@@ -11,8 +11,3 @@
 fn panic(_p: &core::panic::PanicInfo) -> ! {
     loop {}
 }
-
-#[no_mangle]
-pub fn exit(_c: i32) -> ! {
-    loop {}
-}

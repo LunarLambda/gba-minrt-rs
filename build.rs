@@ -30,7 +30,7 @@ const MINRT_PATH: &str = "gba-minrt/rt";
 
 fn main() {
 
-    let crt0 = format!("{}/crt0.s", MINRT_PATH);
+    let crt0 = format!("{}/rsrt0.s", MINRT_PATH);
     let ld = format!("{}/rom.ld", MINRT_PATH);
     let out = var("OUT_DIR");
 
